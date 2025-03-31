@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Survey Form</h1>
+      <p id="description">
+        Please fill out the form below to participate in our survey.
+      </p>
+    </header>
+
+    <form id="survey-form">
+      <section class="text">
+        <label id="name-label" for="name">Name</label>
+        <br />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
+
+        <label id="email-label" for="email">Email</label>
+        <br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label id="number-label" for="number">Age (Optional)</label>
+        <br />
+        <input
+          type="number"
+          id="number"
+          name="number"
+          placeholder="Enter your age"
+          min="15"
+          max="100"
+        />
+      </section>
+      <section class="select-radio-checkbox">
+        <div class="select">
+          <label for="dropdown"
+            >Select your favorite programming language:</label
+          >
+          <select id="dropdown" name="dropdown">
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="csharp">C#</option>
+          </select>
+        </div>
+
+        <div class="radio">
+          <p>What is your current role?</p>
+          <input type="radio" id="student" name="role" value="student" />
+          <label for="student">Student</label><br />
+          <input type="radio" id="developer" name="role" value="developer" />
+          <label for="developer">Developer</label><br />
+          <input type="radio" id="other" name="role" value="other" />
+          <label for="other">Other</label>
+        </div>
+
+        <div class="checkbox">
+          <p>Select your interests:</p>
+          <input
+            type="checkbox"
+            id="frontend"
+            name="interest"
+            value="frontend"
+          />
+          <label for="frontend">Frontend Development</label><br />
+          <input type="checkbox" id="backend" name="interest" value="backend" />
+          <label for="backend">Backend Development</label><br />
+          <input
+            type="checkbox"
+            id="datascience"
+            name="interest"
+            value="datascience"
+          />
+          <label for="datascience">Data Science</label>
+        </div>
+      </section>
+      <section class="text-area">
+        <label for="comments">Additional Comments:</label>
+        <br />
+        <textarea
+          id="comments"
+          name="comments"
+          rows="4"
+          cols="50"
+          placeholder="Enter your comments here"
+        ></textarea>
+        <br /><br />
+      </section>
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </body>
+</html>
